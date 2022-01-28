@@ -1,0 +1,1 @@
+freebayes -f data/MN908947.3.fasta results/aligned_reads/dup.reads.bam > results/variantcall/sample.variants.vcf 2> logs/freebayes.log

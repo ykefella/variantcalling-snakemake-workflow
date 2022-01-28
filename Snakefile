@@ -10,7 +10,8 @@ rule all:
 		"QC/multiqc/",
 		"results/aligned_reads/dup.reads.bam",
 		"results/aligned_reads/metrics.txt",
-		"results/aligned_reads/dup.reads.bam.bai"
+		"results/aligned_reads/dup.reads.bam.bai",
+		"results/variantcall/sample.variants.vcf"
 
 rule fastqc:
 	input:
@@ -76,3 +77,14 @@ rule index:
 		"logs/index.log"
 	shell:
 		"samtools index {input} 2> {log}"
+
+rule freebayes:
+	input:
+		ref = REF,
+		bam = "results/aligned_reads/dup.reads.bam"
+	output:
+		"results/variantcall/sample.variants.vcf"
+	log:
+		"logs/freebayes.log"
+	shell:
+		"freebayes -f {input.ref} {input.bam} > {output} 2> {log}"
