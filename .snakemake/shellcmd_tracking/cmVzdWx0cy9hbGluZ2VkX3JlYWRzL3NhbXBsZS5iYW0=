@@ -1,0 +1,1 @@
+(bwa index data/MN908947.3.fasta && bwa mem data/MN908947.3.fasta data/sample.R1.paired.fq.gz data/sample.R2.paired.fq.gz | samtools view -Sbh > results/alinged_reads/sample.bam) 2> logs/bwa_aling.log
