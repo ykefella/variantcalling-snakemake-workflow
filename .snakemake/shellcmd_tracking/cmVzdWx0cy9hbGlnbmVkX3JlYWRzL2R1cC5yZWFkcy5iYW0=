@@ -1,0 +1,1 @@
+(java -jar /usr/local/Cellar/picard-tools/2.25.7/libexec/picard.jar MarkDuplicates INPUT=results/aligned_reads/sample.sorted.bam OUTPUT=results/aligned_reads/dup.reads.bam METRICS_FILE=results/aligned_reads/metrics.txt) 2> logs/markDuplication.log

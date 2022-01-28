@@ -8,7 +8,9 @@ rule all:
 	input:
 		"QC/fastqc/",
 		"QC/multiqc/",
-		"results/aligned_reads/sample.sorted.bam"
+		"results/aligned_reads/dup.reads.bam",
+		"results/aligned_reads/metrics.txt",
+		"results/aligned_reads/dup.reads.bam.bai"
 
 rule fastqc:
 	input:
@@ -52,3 +54,25 @@ rule sort:
 		"logs/sort.log"
 	shell:
 		"samtools sort {input} -o {output} 2> {log}"
+
+rule markDuplication:
+	input:
+		"results/aligned_reads/sample.sorted.bam"
+	output:
+		dup ="results/aligned_reads/dup.reads.bam",
+		met ="results/aligned_reads/metrics.txt"
+	log:
+		"logs/markDuplication.log"
+	shell:
+		"(java -jar /usr/local/Cellar/picard-tools/2.25.7/libexec/picard.jar MarkDuplicates INPUT={input} OUTPUT={output.dup} "
+		"METRICS_FILE={output.met}) 2> {log}"
+
+rule index:
+	input:
+		"results/aligned_reads/dup.reads.bam"
+	output:
+		"results/aligned_reads/dup.reads.bam.bai"
+	log:
+		"logs/index.log"
+	shell:
+		"samtools index {input} 2> {log}"
