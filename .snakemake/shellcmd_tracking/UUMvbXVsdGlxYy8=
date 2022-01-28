@@ -1,0 +1,1 @@
+multiqc QC/fastqc/ --force -o QC/multiqc/ 2> logs/multiqc.log

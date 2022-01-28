@@ -1,0 +1,9 @@
+
+  /// MultiQC 🔍 | v1.11
+
+|           multiqc | Search path : /Users/yohanakefella/variantcalling-snakemake-workflow/QC/fastqc
+|            fastqc | Found 2 reports
+|           multiqc | Compressing plot data
+|           multiqc | Report      : QC/multiqc/multiqc_report.html
+|           multiqc | Data        : QC/multiqc/multiqc_data
+|           multiqc | MultiQC complete

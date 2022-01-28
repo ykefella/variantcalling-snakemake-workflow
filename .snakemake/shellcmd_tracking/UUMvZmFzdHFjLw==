@@ -1,0 +1,1 @@
+fastqc data/sample.R2.paired.fq.gz data/sample.R1.paired.fq.gz -o QC/fastqc/ 2> logs/fastqc.log

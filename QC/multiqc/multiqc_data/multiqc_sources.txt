@@ -1,0 +1,3 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	sample.R1.paired	/Users/yohanakefella/variantcalling-snakemake-workflow/QC/fastqc/sample.R1.paired_fastqc.zip
+FastQC	all_sections	sample.R2.paired	/Users/yohanakefella/variantcalling-snakemake-workflow/QC/fastqc/sample.R2.paired_fastqc.zip
