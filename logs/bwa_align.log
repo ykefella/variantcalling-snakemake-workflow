@@ -6,7 +6,7 @@
 [bwa_index] Construct SA from BWT and Occ... 0.00 sec
 [main] Version: 0.7.17-r1188
 [main] CMD: bwa index data/MN908947.3.fasta
-[main] Real time: 0.043 sec; CPU: 0.024 sec
+[main] Real time: 0.029 sec; CPU: 0.020 sec
 [M::bwa_idx_load_from_disk] read 0 ALT contigs
 [M::process] read 32000 sequences (2400000 bp)...
 [M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (515, 13014, 472, 487)
@@ -33,7 +33,7 @@
 [M::mem_pestat] skip orientation FF
 [M::mem_pestat] skip orientation RF
 [M::mem_pestat] skip orientation RR
-[M::mem_process_seqs] Processed 32000 reads in 0.940 CPU sec, 0.960 real sec
+[M::mem_process_seqs] Processed 32000 reads in 1.164 CPU sec, 1.484 real sec
 [main] Version: 0.7.17-r1188
 [main] CMD: bwa mem data/MN908947.3.fasta data/sample.R1.paired.fq.gz data/sample.R2.paired.fq.gz
-[main] Real time: 1.394 sec; CPU: 1.027 sec
+[main] Real time: 1.993 sec; CPU: 1.265 sec
