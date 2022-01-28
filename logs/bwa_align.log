@@ -1,0 +1,39 @@
+[bwa_index] Pack FASTA... 0.00 sec
+[bwa_index] Construct BWT for the packed sequence...
+[bwa_index] 0.01 seconds elapse.
+[bwa_index] Update BWT... 0.00 sec
+[bwa_index] Pack forward-only FASTA... 0.00 sec
+[bwa_index] Construct SA from BWT and Occ... 0.00 sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa index data/MN908947.3.fasta
+[main] Real time: 0.043 sec; CPU: 0.024 sec
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 32000 sequences (2400000 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (515, 13014, 472, 487)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (2033, 4336, 7038)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 17048)
+[M::mem_pestat] mean and std.dev: (4626.16, 2971.81)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 22053)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (126, 159, 228)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 432)
+[M::mem_pestat] mean and std.dev: (180.80, 85.08)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 534)
+[M::mem_pestat] analyzing insert size distribution for orientation RF...
+[M::mem_pestat] (25, 50, 75) percentile: (1755, 4204, 6932)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 17286)
+[M::mem_pestat] mean and std.dev: (4436.47, 2932.78)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 22463)
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (2115, 4369, 6888)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 16434)
+[M::mem_pestat] mean and std.dev: (4524.49, 2854.98)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 21207)
+[M::mem_pestat] skip orientation FF
+[M::mem_pestat] skip orientation RF
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 32000 reads in 0.940 CPU sec, 0.960 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem data/MN908947.3.fasta data/sample.R1.paired.fq.gz data/sample.R2.paired.fq.gz
+[main] Real time: 1.394 sec; CPU: 1.027 sec

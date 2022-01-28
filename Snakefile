@@ -8,7 +8,7 @@ rule all:
 	input:
 		"QC/fastqc/",
 		"QC/multiqc/",
-		"results/alinged_reads/sample.sorted.bam"
+		"results/aligned_reads/sample.sorted.bam"
 
 rule fastqc:
 	input:
@@ -30,24 +30,24 @@ rule multiqc:
 	shell:
 		"multiqc {input} --force -o {output} 2> {log}"
 
-rule bwa_aling:
+rule bwa_align:
 	input:
 		ref = REF,
 		r1= "data/sample.R1.paired.fq.gz",
 		r2 = "data/sample.R2.paired.fq.gz"
 	output: 
-		"results/alinged_reads/sample.bam"
+		"results/aligned_reads/sample.bam"
 	log:
-		"logs/bwa_aling.log"
+		"logs/bwa_align.log"
 	shell: 
 		"(bwa index {input.ref} "
 		"&& bwa mem {input.ref} {input.r1} {input.r2} | samtools view -Sbh > {output}) 2> {log}"
 
 rule sort:
 	input:
-		"results/alinged_reads/sample.bam"
+		"results/aligned_reads/sample.bam"
 	output:
-		"results/alinged_reads/sample.sorted.bam"
+		"results/aligned_reads/sample.sorted.bam"
 	log:
 		"logs/sort.log"
 	shell:

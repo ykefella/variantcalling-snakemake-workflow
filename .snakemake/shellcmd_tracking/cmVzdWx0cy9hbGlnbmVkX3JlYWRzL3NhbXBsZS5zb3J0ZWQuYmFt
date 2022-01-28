@@ -1,0 +1,1 @@
+samtools sort results/aligned_reads/sample.bam -o results/aligned_reads/sample.sorted.bam 2> logs/sort.log
