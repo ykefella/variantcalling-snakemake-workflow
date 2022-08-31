@@ -15,10 +15,10 @@ This workflow process the raw files quality control `fastqc and multiqc`, calls 
 the reference genome, calls `samtools sort` to sort the alinged reads, calls `picard.jar MarkDuplicates`  to mark duplicate reads, calls `samtools index` to index sorted and marked duplicate reads, and finally calls `freebayes` to detect genetic variant and outputs a VCF file. 
 
 ![dag](dag.svg)
-# Tools need to run the pipeline
+## Tools need to run the pipeline
 
-[FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
-[MultiQC](https://multiqc.info/docs/)
-[BWA-MEM](http://bio-bwa.sourceforge.net/)
-[Picard](https://broadinstitute.github.io/picard/)
-[Freebayes](https://github.com/freebayes/freebayes)
+- [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+- [MultiQC](https://multiqc.info/docs/)
+- [BWA-MEM](http://bio-bwa.sourceforge.net/)
+- [Picard](https://broadinstitute.github.io/picard/)
+- [Freebayes](https://github.com/freebayes/freebayes)
